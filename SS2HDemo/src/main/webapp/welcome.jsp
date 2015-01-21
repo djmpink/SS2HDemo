@@ -9,13 +9,11 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
   <head>
-    <title></title>
+    <title><s:text name="succPage"/></title>
   </head>
   <body>
-  <s:form action="login">
-    <s:textfield name="username" key="user"/>
-    <s:textfield name="password" key="pass"/>
-    <s:submit key="login"/>
-  </s:form>
+    <s:text name="succTip">
+      <s:param>${sessionScope.user}</s:param>
+    </s:text><br>
   </body>
 </html>
