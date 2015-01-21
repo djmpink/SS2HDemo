@@ -57,7 +57,7 @@
               </property>
        </bean>
 
-       <bean id="userDAO" class="cn.no7player.ssh.dao.impl.UserDAOImpl">
+       <bean id="userDAO" class="cn.no7player.ssh.dao.impl.UserDaoImpl">
               <property name="hibernateTemplate">
                      <ref bean="hibernateTemplate"/>
               </property>
