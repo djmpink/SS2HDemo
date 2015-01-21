@@ -38,10 +38,7 @@
       <artifactId>spring-orm</artifactId>
       <version>3.1.1.RELEASE</version>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId></groupId>-->
-      <!--<artifactId>spring</artifactId>-->
-    <!--</dependency>-->
+
   </dependencies>
 
   <build>

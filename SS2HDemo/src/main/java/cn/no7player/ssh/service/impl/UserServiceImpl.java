@@ -12,11 +12,11 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
     private UserDao userDao;
 
-    public UserDao getUserDAO() {
+    public UserDao getUserDao() {
         return userDao;
     }
 
-    public void setUserDAO(UserDao userDao) {
+    public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
 

@@ -44,12 +44,12 @@
               </property>
        </bean>
 
-       <bean id="service" class="org.springframework.transaction.interceptor.TrasactionProxyFactoryBean" abstract="true">
-              <property name="trasactionManager">
-                     <ref bean="trasactionManager"/>
+       <bean id="service" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+              <property name="transactionManager">
+                     <ref bean="transactionManager"/>
               </property>
 
-              <property name="trasactionAttributes">
+              <property name="transactionAttributes">
                      <props>
                             <prop key="add">PROPAGATION_REQUIRED</prop>
                             <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
@@ -57,14 +57,14 @@
               </property>
        </bean>
 
-       <bean id="userDAO" class="localhost.login.dao.UserDAOImpl">
+       <bean id="userDAO" class="cn.no7player.ssh.dao.impl.UserDAOImpl">
               <property name="hibernateTemplate">
                      <ref bean="hibernateTemplate"/>
               </property>
        </bean>
 
-       <bean id="userService" class="localhost.login.service.UserServiceImpl">
-              <property name="userDAO">
+       <bean id="userService" class="cn.no7player.ssh.service.impl.UserServiceImpl">
+              <property name="userDao">
                      <ref bean="userDAO"/>
               </property>
        </bean>

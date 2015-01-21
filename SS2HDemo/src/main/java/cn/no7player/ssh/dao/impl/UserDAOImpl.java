@@ -1,17 +1,16 @@
 package cn.no7player.ssh.dao.impl;
 
+
 import cn.no7player.ssh.dao.UserDao;
 import cn.no7player.ssh.po.User;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import java.util.List;
-
 /**
  * Created by zl on 1/21/2015.
  */
-@SuppressWarnings("ALL")
-public class UserDAOImpl extends HibernateDaoSupport implements UserDao{
+public class UserDAOImpl extends HibernateDaoSupport implements UserDao {
     @Override
     public String addUser(User user) {
         String success = "";
