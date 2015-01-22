@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="cn.no7player.ssh.po">
-    <class name="User">
+    <class name="User" >
         <id name="id" >
             <generator class="identity"/>
         </id>

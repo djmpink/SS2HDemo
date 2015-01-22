@@ -9,7 +9,7 @@
                      <value>com.mysql.jdbc.Driver</value>
               </property>
               <property name="url">
-                     <value>jdbc:mysql://localhost:3306/ss2h</value>
+                     <value>jdbc:mysql://localhost:3307/ss2hdemo</value>
               </property>
               <property name="username" value="root"/>
               <property name="password" value="123456" />
@@ -21,7 +21,7 @@
               </property>
 
               <property name="mappingLocations">
-                     <value>cn/no7player/ssh/po/user.hbm.xml</value>
+                     <value>user.hbm.xml</value>
               </property>
 
               <property name="hibernateProperties">

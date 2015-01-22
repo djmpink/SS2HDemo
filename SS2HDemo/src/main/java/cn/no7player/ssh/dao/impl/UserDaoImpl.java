@@ -31,12 +31,12 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao{
     @SuppressWarnings("unchecked")
     @Override
     public List<User> findUserByName(String name) {
-        return getHibernateTemplate().find("from User users where users.name = ?",name);
+        return getHibernateTemplate().find("from User where name = ?",name);
     }
 
     @SuppressWarnings("unchecked")
     @Override
     public List<User> listAll() {
-        return getHibernateTemplate().find("from User");
+        return getHibernateTemplate().find(" from User ");
     }
 }
