@@ -31,6 +31,7 @@ public class UserLoginAction extends ActionSupport{
             return INPUT;
         }
         if(!userCheck(user)){
+            System.out.println("INPUT");
             return INPUT;
         }
         System.out.println("SUCCESS");

@@ -13,16 +13,10 @@
                 </global-exception-mappings>
                 <action name="login" class="cn.no7player.ssh.action.UserLoginAction">
                         <!-- 定义三个逻辑视图和物理资源之间的映射 -->
-                        <result name="input">/user/login.jsp</result>
+                        <result name="input">/login.jsp</result>
                         <result name="error">/error.jsp</result>
-                        <result name="success">/user/hello.jsp</result>
+                        <result name="success">/welcome.jsp</result>
                 </action>
-                <!--<action name="login" class="cn.no7player.ssh.action.UserLoginAction">-->
-                        <!--&lt;!&ndash; 定义三个逻辑视图和物理资源之间的映射 &ndash;&gt;-->
-                        <!--<result name="input">/login.jsp</result>-->
-                        <!--<result name="error">/error.jsp</result>-->
-                        <!--<result name="success">/welcome.jsp</result>-->
-                <!--</action>-->
 
         </package>
 
