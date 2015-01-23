@@ -9,7 +9,7 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
   <head>
-    <title></title>
+    <title>Log in</title>
   </head>
   <body>
   <s:form action="login">

@@ -3,6 +3,7 @@ package cn.no7player.ssh.action;
 import cn.no7player.ssh.po.User;
 import cn.no7player.ssh.service.UserService;
 import cn.no7player.ssh.util.InitApplicationContext;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.context.ApplicationContext;
 
@@ -22,6 +23,7 @@ public class UserLoginAction extends ActionSupport{
 
     @Override
     public String execute() throws Exception {
+        System.out.println(user.getName());
         if (!isValid(user.getName())) {
             return INPUT;
         }
@@ -31,6 +33,9 @@ public class UserLoginAction extends ActionSupport{
         if(!userCheck(user)){
             return INPUT;
         }
+        System.out.println("SUCCESS");
+
+        ActionContext.getContext().getSession().put("user" , user);
         return SUCCESS;
     }
 
@@ -44,8 +49,8 @@ public class UserLoginAction extends ActionSupport{
             return false;
         }
         User checkUser = userList.get(0);
-        if (user.getName().equals(checkUser.getName())
-                && user.getPassword().equals(checkUser.getPassword())) {
+        System.out.println(checkUser.getName());
+        if (user.getName().equals(checkUser.getName()) && user.getPassword().equals(checkUser.getPassword())) {
             return true;
         }
         addActionError("Username or password is wrong, please check!");
