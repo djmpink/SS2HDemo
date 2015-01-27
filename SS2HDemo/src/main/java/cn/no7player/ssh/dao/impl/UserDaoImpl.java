@@ -1,6 +1,8 @@
 package cn.no7player.ssh.dao.impl;
 import cn.no7player.ssh.dao.UserDao;
 import cn.no7player.ssh.po.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
@@ -11,6 +13,7 @@ import java.util.List;
  */
 @SuppressWarnings("ALL")
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao{
+    private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
     @Override
     public String addUser(User user) {
         String success = "";

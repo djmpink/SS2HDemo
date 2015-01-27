@@ -3,6 +3,8 @@ package cn.no7player.ssh.service.impl;
 import cn.no7player.ssh.dao.UserDao;
 import cn.no7player.ssh.po.User;
 import cn.no7player.ssh.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -11,7 +13,7 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService{
     private UserDao userDao;
-
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
     public UserDao getUserDao() {
         return userDao;
     }

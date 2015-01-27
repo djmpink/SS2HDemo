@@ -5,6 +5,8 @@ import cn.no7player.ssh.service.UserService;
 import cn.no7player.ssh.util.InitApplicationContext;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 
 import java.util.List;
@@ -15,6 +17,7 @@ import java.util.List;
 public class UserLoginAction extends ActionSupport{
     private UserService userService;
     private User user;
+    private static final Logger logger = LoggerFactory.getLogger(UserLoginAction.class);
 
     public UserLoginAction() {
         ApplicationContext context = InitApplicationContext.getApplicationContext();
@@ -23,6 +26,7 @@ public class UserLoginAction extends ActionSupport{
 
     @Override
     public String execute() throws Exception {
+        logger.info("execute");
         System.out.println(user.getName());
         if (!isValid(user.getName())) {
             return INPUT;
@@ -50,7 +54,7 @@ public class UserLoginAction extends ActionSupport{
             return false;
         }
         User checkUser = userList.get(0);
-        System.out.println(checkUser.getName());
+//        System.out.println(checkUser.getName());
         if (user.getName().equals(checkUser.getName()) && user.getPassword().equals(checkUser.getPassword())) {
             return true;
         }

@@ -19,11 +19,9 @@
               <property name="dataSource">
                      <ref bean="dataSource"/>
               </property>
-
               <property name="mappingLocations">
                      <value>user.hbm.xml</value>
               </property>
-
               <property name="hibernateProperties">
                      <props>
                             <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
